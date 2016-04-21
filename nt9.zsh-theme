@@ -27,9 +27,9 @@ function get_pwd(){
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
 function git_time_since_commit() {
-    if git rev-parse --git-dir > /dev/null 2>&1 && git log --pretty=format:'%at' -1 2> /dev/null; then
+    if git rev-parse --git-dir > /dev/null 2>&1; then
         # Only proceed if there is actually a commit.
-        if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
+        if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal") == 0 ]]; then
             # Get the last commit.
             last_commit=`git log --pretty=format:'%at' -1 2> /dev/null`
             now=`date +%s`
@@ -90,3 +90,4 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 PROMPT='$ret_status %{%F{magenta}%}$(get_pwd)%{%f%k%b%} $(git_prompt_short_sha)$(git_prompt_info)
 $(_prompt_char) '
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'
+
