@@ -27,7 +27,7 @@ function get_pwd(){
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
 function git_time_since_commit() {
-    if git rev-parse --git-dir > /dev/null 2>&1; then
+    if git rev-parse --git-dir > /dev/null 2>&1 && git log --pretty=format:'%at' -1 2> /dev/null; then
         # Only proceed if there is actually a commit.
         if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
             # Get the last commit.
