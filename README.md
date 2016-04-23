@@ -28,4 +28,4 @@ ZSH_THEME="nt9"
 
 This theme is highly inspired by the following themes:
 * [Gitster](https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme)
-* [Smt](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#smt)
+* [Smt](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/smt.zsh-theme)
