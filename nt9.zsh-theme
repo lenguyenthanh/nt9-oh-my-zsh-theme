@@ -57,9 +57,9 @@ function git_time_since_commit() {
             fi
 
             if [ "$HOURS" -gt 24 ]; then
-                echo "[$COLOR${DAYS}d${SUB_HOURS}h${SUB_MINUTES}m%{$reset_color%}]"
+                echo "[$COLOR${DAYS}d%{$reset_color%}]"
             elif [ "$MINUTES" -gt 60 ]; then
-                echo "[$COLOR${HOURS}h${SUB_MINUTES}m%{$reset_color%}]"
+                echo "[$COLOR${HOURS}h%{$reset_color%}]"
             else
                 echo "[$COLOR${MINUTES}m%{$reset_color%}]"
             fi
@@ -90,4 +90,3 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 PROMPT='$ret_status %{%F{magenta}%}$(get_pwd)%{%f%k%b%} $(git_prompt_short_sha)$(git_prompt_info)
 $(_prompt_char) '
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'
-
