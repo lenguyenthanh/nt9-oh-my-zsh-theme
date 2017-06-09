@@ -1,4 +1,4 @@
-#Nt9 oh-my-zsh theme
+# Nt9 oh-my-zsh theme
 
 A clean, distraction free and git focused development theme for [oh-my-zsh shell](https://github.com/robbyrussell/oh-my-zsh). 
 
