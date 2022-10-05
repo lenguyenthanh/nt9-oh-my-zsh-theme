@@ -17,7 +17,15 @@ It currently shows:
 
 1. Download the theme [here](https://raw.githubusercontent.com/lenguyenthanh/nt9-oh-my-zsh-theme/master/nt9.zsh-theme)
 
+```bash
+wget https://raw.githubusercontent.com/lenguyenthanh/nt9-oh-my-zsh-theme/master/nt9.zsh-theme
+```
+
 2. Put the file **nt9.zsh-theme** in **$ZSH_CUSTOM/themes/**
+
+```bash
+mv nt9.zsh-theme $ZSH_CUSTOM/themes/
+```
 
 3. Configure the theme in your **~/.zshrc** file:
 
